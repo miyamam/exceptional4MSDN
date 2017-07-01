@@ -1,0 +1,854 @@
+@charset "UTF-8";
+
+/*
+Theme Name:  exceptional4MSDN
+Author:      miyamam
+Version:     1.3
+-------------------------------------------------------------- */
+
+
+/****************************************
+          General Setting
+*****************************************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Osaka', 'メイリオ', sans-serif;
+    line-height: 160%;
+}
+
+
+/****************************************
+          Typography
+*****************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: 'メイリオ', sans-serif;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: 'メイリオ', sans-serif;
+    padding-bottom: .5em;
+    border-bottom: 3px solid #ff89c4;
+}
+
+h1:first-letter {
+    margin-right: .1em;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: 'メイリオ', sans-serif;
+    padding-bottom: .5em;
+    border-bottom: 3px solid #ff89c4;
+}
+
+h2:first-letter {
+    margin-right: .1em;
+    font-size: 1.5em;
+}
+
+h2.entry-title a {
+    font-size: 30px;
+    font-family: 'メイリオ', sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+    font-family: 'メイリオ', sans-serif;
+    color: #ff89c4 padding-bottom: .5em;
+    border-bottom: 3px solid #ff89c4;
+}
+
+h4 {
+    border: #ff89c4 solid 1px;
+    border-left: #ff89c4 solid 10px;
+    padding: 12px;
+    background: #fff;
+    font-weight: bold;
+    font-family: 'メイリオ', sans-serif;
+}
+
+
+/*blockquote{
+	margin-bottom: 2em;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+}*/
+
+
+/* 引用のデザイン1 */
+
+blockquote {
+    padding: 20px 55px;
+    background: rgba(245, 245, 245, 0.8);
+    color: #222;
+    position: relative;
+    border: solid 1px #fff;
+    margin: 0.8em 0;
+}
+
+
+/* 引用のデザイン2 */
+
+blockquote:before {
+    color: rgba(200, 200, 200, 1);
+    content: "“";
+    font-family: serif;
+    font-size: 600%;
+    left: 0;
+    line-height: 1em;
+    position: absolute;
+    top: 0;
+}
+
+
+/* 引用のデザイン3 */
+
+blockquote:after {
+    content: "”";
+    font-family: serif;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 600%;
+    color: rgba(200, 200, 200, 1);
+    line-height: 0;
+}
+
+
+/****************************************
+          List
+*****************************************/
+
+ul,
+
+/*ol {
+    margin: 0;
+    padding: 0;
+    counter-reset:number; /* 名前を付けたカウンターをリセット */
+
+list-style: none;
+
+/*ol が数字を付けることをキャンセル*/
+
+
+/*}
+
+ol li{
+　/* リスト部分は好きに装飾！ */
+
+
+/*}
+ol li:before{　/* カウンタ（数字になる部分） */
+
+
+/*counter-increment: number; /* 任意の名前を付けて！ */
+
+
+/*content: counter(number); /* 名前を付けたカウンターを呼び出し */
+
+
+/* 色を変えたり、背景画像を敷いたり！自由自在！ */
+
+
+/*}　*/
+
+ul,
+ol {
+    background: #dadada;
+    /*灰色に*/
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px silver;
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+
+ul li,
+ol li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
+ul ul {
+    margin-left: 1em;
+}
+
+
+/****************************************
+          Link
+*****************************************/
+
+a {
+    border-bottom: 1px solid #000;
+    color: ##db7093;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px soli#ff89c4;
+    color: #ff89c4;
+}
+
+
+/****************************************
+          Layout
+*****************************************/
+
+#container,
+.wrapper {
+    margin: 0 auto;
+    width: 940px;
+}
+
+#header {
+    margin-bottom: 20px;
+    padding-top: 40px;
+    border-bottom: 1px solid #ddd;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+#header .alignleft,
+#header .alignright {
+    margin-bottom: 20px;
+    width: auto;
+}
+
+#header .alignright {
+    width: 200px;
+}
+
+#main {
+    float: left;
+    width: 600px;
+}
+
+#sidebar {
+    float: right;
+    width: 250px;
+}
+
+#main,
+#sidebar {
+    margin-bottom: 59px;
+    border-bottom: 1px solid transparent;
+}
+
+#footer {
+    clear: both;
+    background: #555;
+    color: #fff;
+}
+
+
+/****************************************
+          header
+*****************************************/
+
+*:first-child+html #header>div {
+    /* IE7 */
+    clear: both;
+    zoom: 1;
+}
+
+#logo {
+    border-bottom: 1px dashed #ff89c4;
+}
+
+#logo a {
+    border: none;
+}
+
+#description {
+    margin-top: 0;
+    color: #777;
+}
+
+#searchform {
+    position: relative;
+    margin-top: 45px;
+}
+
+#s {
+    padding: 6px 20% 6px 5%;
+    width: 75%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 10px;
+}
+
+#searchsubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 26px;
+    border: none;
+    background: url(images/search.png) no-repeat 50% 50%;
+}
+
+
+/****************************************
+          Navigation
+*****************************************/
+
+#header .menu {
+    position: relative;
+    bottom: -1px;
+    clear: both;
+    margin-bottom: 0;
+}
+
+#header div.menu>ul,
+#header ul.menu {
+    border-left: 1px solid #ddd;
+}
+
+#header div.menu>ul>li,
+#header ul.menu>li {
+    float: left;
+}
+
+#header .menu li {
+    position: relative;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#header .menu li a {
+    display: block;
+    padding: .5em 1em;
+    border-bottom: none;
+}
+
+#header div.menu>ul>li.current_page_item,
+#header ul.menu>li.current_page_item {
+    border-bottom: 1px solid #fff;
+}
+
+#header ul.sub-menu,
+#header ul.children {
+    position: absolute;
+    left: -1px;
+    display: none;
+    margin-left: 0;
+    width: auto;
+    width: 150px;
+    border: 1px solid #ddd;
+    background: #eee;
+}
+
+#header .sub-menu li,
+#header .children li {
+    position: relative;
+    border: none;
+}
+
+#header ul.sub-menu ul,
+#header ul.children ul {
+    top: -1px;
+    left: 150px;
+}
+
+#header .menu li:hover>ul {
+    display: block;
+}
+
+
+/****************************************
+          header image
+*****************************************/
+
+#header-image {
+    margin-bottom: 40px;
+}
+
+
+/****************************************
+          Breadcrumb
+*****************************************/
+
+#breadcrumb {
+    margin-bottom: 20px;
+}
+
+#breadcrumb li {
+    float: left;
+    margin-right: .5em;
+}
+
+
+/****************************************
+          Main
+*****************************************/
+
+#main .post,
+#main .page {
+    overflow: hidden;
+    margin-bottom: 59px;
+    border-bottom: 1px solid transparent;
+}
+
+.sticky {
+    /* 先頭固定ポストのスタイル */
+}
+
+.post-meta {
+    margin-bottom: 1.5em;
+}
+
+.post-meta .post-date,
+.post-meta .category {
+    padding-right: 1em;
+}
+
+.comment-num {
+    white-space: nowrap;
+}
+
+.more-link {
+    float: right;
+}
+
+.navigation {
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: url(images/gray.gif) repeat-y 50% 0;
+}
+
+.navigation>div {
+    width: 50%;
+}
+
+.navigation .alignright {
+    text-align: right;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    border: none;
+}
+
+.navigation a:hover {
+    background: #ffeff7;
+    color: #000;
+}
+
+.navigation .alignright a:hover {
+    border-left: 1px solid #ddd;
+}
+
+.footer-post-meta {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.post-author {
+    padding-left: 1em;
+}
+
+.page-link {
+    margin: 3em 0;
+}
+
+.comment-page-link {
+    margin: 0 0 3em;
+}
+
+.page-link span,
+.comment-page-link span,
+.comment-page-link a {
+    display: inline-block;
+    margin-right: 3px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    background: #ddd;
+}
+
+.page-link a span,
+.comment-page-link a {
+    background: #fff;
+}
+
+.page-link a {
+    border-bottom: none;
+    color: #000;
+}
+
+.page-link a span:hover,
+.comment-page-link a:hover {
+    background: #ffeff7;
+    color: #000;
+}
+
+
+/****************************************
+          Comments Area
+*****************************************/
+
+#comment-area h3 {
+    font-size: 150%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+.required {
+    color: #ff89c4;
+}
+
+.commets-list,
+.trackback-list {
+    overflow: hidden;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.commets-list li,
+.trackback-list li {
+    overflow: hidden;
+    margin-top: -1px;
+    padding: 20px 0 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid transparent;
+}
+
+.commets-list .avatar {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-meta,
+.reply,
+.comment-notes,
+.form-allowed-tags,
+span.small {
+    font-size: 80%;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+.comment-body p {
+    clear: both;
+}
+
+.reply {
+    text-align: right;
+}
+
+.bypostauthor {
+    /* 記事投稿者のコメントのスタイル */
+}
+
+.children {
+    padding-left: 2em;
+}
+
+#respond {
+    margin-bottom: 40px;
+}
+
+
+/****************************************
+          index.php Main
+*****************************************/
+
+.content-box {
+    float: right;
+    margin-top: -0.25em;
+    width: 420px;
+}
+
+.content-box .more-link {
+    margin: 0;
+}
+
+.thumbnail-box {
+    float: left;
+    width: 160px;
+}
+
+.thumbnail-box img {
+    width: 160px;
+    height: 160px;
+}
+
+
+/****************************************
+          Sidebar
+*****************************************/
+
+#sidebar h2 {
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+.widget {
+    margin-bottom: 60px;
+}
+
+#sidebar .widget ul {
+    padding-left: 1.5em;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+
+#sidebar-recent-posts li,
+#sidebar-popular-posts li {
+    margin: 20px 0;
+}
+
+.sidebar-thumbnail-box {
+    float: left;
+    width: 75px;
+}
+
+.sidebar-recent-posts-title {
+    float: right;
+    width: 165px;
+}
+
+#sidebar-recent-posts h3,
+#sidebar-recent-posts p,
+#sidebar-popular-posts h3,
+#sidebar-popular-posts p {
+    margin: 0;
+}
+
+.tagcloud a {
+    white-space: nowrap;
+}
+
+
+/****************************************
+          Footer
+*****************************************/
+
+#copyright {
+    padding: 20px 0;
+    font-size: 80%;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+
+/****************************************
+          Form
+*****************************************/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+textarea {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 6px 4px;
+    max-width: 100%;
+    width: 290px;
+    outline: none;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #eee;
+    color: #777;
+    vertical-align: bottom;
+    font-size: 13px;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+#comment-area input[type="text"],
+#comment-area textarea {
+    display: block;
+}
+
+textarea {
+    overflow: auto;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border: 1px solid #ff89c4;
+    background: #fff;
+    -webkit-box-shadow: 0 0 3px#ff89c4;
+    -moz-box-shadow: 0 0 3px#ff89c4;
+    box-shadow: 0 0 3px#ff89c4;
+    color: #444;
+}
+
+
+/*.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 4px 12px;
+	padding: 8px 10px;
+	border: 1px solid#ff89c4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background:#ff89c4;
+	color: #333;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(255, 255, 255, .75);
+	font-weight: bold;
+	font-size: 12px;
+	line-height: normal;
+	cursor: pointer;
+    font-family:
+    	Verdana, Arial,
+    	'ヒラギノ角ゴ Pro W3',
+    	'Hiragino Kaku Gothic Pro',
+    	Osaka,
+    	'メイリオ',
+    	sans-serif;
+	/* Old browsers */
+
+
+/*}
+
+	.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+	  	border: 1px solid #ff89c4;
+		background: #ff89c4;
+		color: #fff;
+	  	text-shadow: 0 -1px rgba(0, 0, 0, .4);
+
+	}
+
+	.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+		position: relative;
+		top:1px;
+	}
+*/
+
+
+/****************************************
+          WordPress Misc
+*****************************************/
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    margin: 10px;
+    padding-top: 4px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.wp-caption-text,
+.gallery-caption {
+    font-size: 80%;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption-dd {
+    margin: 0;
+    padding: 0 4px 5px;
+    font-size: 11px;
+    line-height: 17px;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+img.alignright {
+    display: inline-block;
+    margin: 0 0 1em 1.5em;
+}
+
+img.alignleft {
+    display: inline-block;
+    margin: 0 1.5em 1em 0;
+}
+
+
+/****************************************
+          Clearfix
+*****************************************/
+
+#container:after,
+#header .menu>ul:after,
+#header ul.menu:after,
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+    font-family: Verdana, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', sans-serif;
+}
+
+
+/* clearfix for ie7 */
+
+#container,
+#header .menu>ul,
+#header ul.menu,
+.clearfix {
+    display: inline-block;
+}
+
+#container,
+#header .menu>ul,
+#header ul.menu,
+.clearfix {
+    display: block;
+}
